@@ -1,0 +1,45 @@
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 90px;
+
+    &__official {
+        text-align: center;
+    }
+
+    &__official-top {
+        @include fonts-size(12px, 500, #fff);
+    }
+
+    &__official-bottom {
+        @include fonts-size(18px, 500, #fff);
+        font-style: italic;
+
+        &:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    &__phone {
+        @include fonts-size(18px, 500, #fff);
+        
+        &:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+
+    &__btn {
+        width: 150px;
+        height: 40px;
+    }
+}
