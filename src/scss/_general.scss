@@ -169,7 +169,39 @@ a, input, button {
     }
 }
 
-.carousel-block {
+.carousel {
     min-height: 450px;
     padding: 80px 0;
+
+    &__inner {
+        width: 750px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &__prev{
+        background-color: #fff;
+        border: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -60px;
+
+        &:focus {
+            border: 2px solid #f00;
+        }
+    }
+
+    &__next {
+        background-color: #fff;
+        border: none;
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%);
+        right: -60px;
+
+        &:focus {
+            border: 2px solid #f00;
+        }
+    }
 }
