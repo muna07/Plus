@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     $('.carousel__inner').slick({
         infinity: true,
         speed: 700,
@@ -16,4 +17,13 @@ $(document).ready(function(){
             },
         ]
     });
+
+    $(function() {
+        $('ul.tabs__caption').on('click', 'li.tabs__elem:not(.tabs__elem_avtive)', function() {
+            $(this)
+              .addClass('tabs__elem_active').siblings().removeClass('tabs__elem_active')
+              .closest('section.tabs').find('div.tabs__content').removeClass('tabs__content_active').eq($(this).index()).addClass('tabs__content_active');
+          });
+    });
+
   });

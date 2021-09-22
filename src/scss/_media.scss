@@ -35,6 +35,12 @@
             width: 730px;
         }
     }
+
+    .tabs {
+        &__elem {
+            width: 200px;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -78,6 +84,17 @@
         min-height: 250px;
         &__inner {
             width: 380px;
+        }
+    }
+
+    .tabs {
+        &__elem {
+            display: block;
+            margin: 0 auto 15px auto;
+
+            &:last-child{
+                margin: 0 auto 15px auto;
+            }
         }
     }
 }
