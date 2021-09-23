@@ -97,6 +97,28 @@
             }
         }
     }
+
+    .reviews {
+        &__item {
+            flex-direction: column;
+        }
+
+        &__img {
+            display: inline-block;
+            margin: 0 auto 20px auto;
+            width: 140px;
+        }
+
+        &__info {
+            text-align: center;
+        }
+
+        &__description {
+            span {
+                display: none;
+            }
+        }
+    }
 }
 
 @media (max-width: 425px) {

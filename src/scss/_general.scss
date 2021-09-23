@@ -251,6 +251,7 @@ a, input, button {
         }
 
         span {
+            display: block;
             transform: skewX(35deg);
         }
     }
@@ -331,5 +332,113 @@ a, input, button {
         &:focus {
             border: 2px solid red;
         }
+    }
+}
+
+.reviews {
+    min-height: 500px;
+    max-width: 900px;
+    padding: 50px 0;
+    margin: 0 auto;
+
+    &__title {
+        @include fonts-size(30px, 700, #000);
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 60px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__img {
+        width: 170px;
+        margin-right: 50px;
+    }
+
+    &__info {
+        max-width: 660px;
+    }
+
+    &__name {
+        @include fonts-size(18px, 700, #000);
+    }
+
+    &__marathon {
+        @include fonts-size(14px, 500, #646464);
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        @include fonts-size(16px, 300, #000);
+    }
+}
+
+.footer {
+    height: 400px;
+    position: relative;
+
+    &__info {
+        width: 350px;
+        height: 200px;
+        background-color: #f00;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform:translateX(-50%);
+    }
+
+    &__wrapper {
+        width: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    &__item {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 100%;
+    }
+
+    &__link {
+        color: #fff;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+
+        &:hover {
+            color: #fff;
+
+        }
+
+        i {
+            font-size: 22px;
+        }
+    }
+
+    &__address {
+        @include fonts-size(20px, 500, #fff);
+        margin: 20px 0 20px 0;
+        text-align: center;
+    }
+
+    &__tel {
+        display: block;
+        @include fonts-size(20px, 700, #fff);
+        margin: 0 auto 20px auto;
+        text-align: center;
     }
 }
