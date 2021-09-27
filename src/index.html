@@ -23,7 +23,7 @@
                     </div>
                     <div class="head__contacts">
                         <a href="tel:+74999228974" class="head__phone">+7 (499) 922-89-74</a>
-                        <button class="main-btn head__btn" type="submit">заказать звонок</button>
+                        <button data-modal="consultation" class="main-btn head__btn" type="submit">заказать звонок</button>
                     </div>
                 </header>
                 <div class="promo__wrapper">
@@ -43,7 +43,7 @@
                             <div class="promo__description">Ответим на все вопросы</div>
                         </div>
                     </div>
-                    <button type="button" class="main-btn promo__btn">заказать кОНСУЛЬТАЦИЮ</button>
+                    <button type="button" class="main-btn promo__btn" data-modal="consultation">заказать кОНСУЛЬТАЦИЮ</button>
                     <span>или <a class="promo__link" href="#">ПЕРЕЙТИ В КАТАЛОГ</a></span>
                 </div>
             </div>
@@ -316,11 +316,11 @@
             </div>
         </footer>
     </main>
-
-    <secion class="modal-block">
-        <div class="modal">
-            <h2 class="modal__subtitle">Просто заполните форму заявки</h2>
-            <div class="modal__description">и мы перезвоним вам в течении 10 минут</div>
+    <section class="overlay">
+        <div class="modal-block" id="consultation">
+            <div class="modal-block__close">&times;</div>
+            <h2 class="modal-block__subtitle">Просто заполните форму заявки</h2>
+            <div class="modal-block__description">и мы перезвоним вам в течении 10 минут</div>
             <form class="search-form">
                 <input type="text" name="userName" placeholder="Ваше имя" value="" class="search-form__input" required>
                 <input type="tel" name="userTel" placeholder="Ваш телефон" value="" class="search-form__input" required>
@@ -328,9 +328,26 @@
                 <button type="submit" class="main-btn search-form__btn">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
         </div>
-    </secion>
+        <div class="modal-block" id="order">
+            <div class="modal-block__close">&times;</div>
+            <h2 class="modal-block__subtitle">Ваш заказ:</h2>
+            <div class="modal-block__description">Пульсометр Polar FT1</div>
+            <form class="search-form">
+                <input type="text" name="userName" placeholder="Ваше имя" value="" class="search-form__input" required>
+                <input type="tel" name="userTel" placeholder="Ваш телефон" value="" class="search-form__input" required>
+                <input type="email" name="userEmail" placeholder="Ваш E-mail" value="" class="search-form__input" required>
+                <button type="submit" class="main-btn search-form__btn">Купить</button>
+            </form>
+        </div>
+        <div class="modal-block modal-block_mini" id="thanks">
+            <div class="modal-block__close">&times;</div>
+            <h2 class="modal-block__subtitle">Спасибо за вашу заявку!</h2>
+            <div class="modal-block__description">Наш менеджер свяжется с вами в ближайшее время!</div>
+        </div>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

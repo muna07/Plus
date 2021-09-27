@@ -26,4 +26,22 @@ $(document).ready(function(){
           });
     });
 
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+    })
+
+    $('.modal-block__close').on(function() {
+        $('.overlay, #consultation').fadeOut('slow');
+    })
+
+    $('.tabs__btn').on('click', function() {
+        $('.overlay, #order').fadeIn('slow');
+    })
+
+    $('.modal-block__close').on('click', function() {
+        $('.overlay, #order').fadeOut('slow');
+    })
+
+    $('input[name=userTel]').mask("+7 (999) 999-99-99");
+
   });
