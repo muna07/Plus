@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    
+
     $('.carousel__inner').slick({
         infinity: true,
         speed: 700,
