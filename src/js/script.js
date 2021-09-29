@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+    //slick-slider
     $('.carousel__inner').slick({
         infinity: true,
         speed: 700,
@@ -18,6 +19,7 @@ $(document).ready(function(){
         ]
     });
 
+    //tabs
     $(function() {
         $('ul.tabs__caption').on('click', 'li.tabs__elem:not(.tabs__elem_avtive)', function() {
             $(this)
@@ -26,6 +28,7 @@ $(document).ready(function(){
           });
     });
 
+    //modal
     $('[data-modal=consultation]').on('click', function() {
         $('.overlay, #consultation').fadeIn('slow');
     })
@@ -42,6 +45,17 @@ $(document).ready(function(){
         $('.overlay, #order').fadeOut('slow');
     })
 
+    //input-mask
     $('input[name=userTel]').mask("+7 (999) 999-99-99");
+
+    //pageUp
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 2000) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    })
 
   });
